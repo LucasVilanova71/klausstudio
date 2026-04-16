@@ -395,6 +395,7 @@ function toggleLang() {
 
   var heroTitle = document.querySelector(".hero-title");
   heroTitle.childNodes[0].textContent = t.line1 + " ";
+  heroTitle.childNodes[0].style.letterSpacing = currentLang === "es" ? "0.04em" : "-.04em";
   var outlines = document.querySelectorAll(".hero-title .outline");
   if (outlines[0]) outlines[0].textContent = t.line2;
   if (outlines[1]) {
