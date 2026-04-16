@@ -211,7 +211,7 @@ footer{border-top:1px solid #161616;padding:2rem 3rem;display:flex;justify-conte
 
   <p class="hero-eyebrow fade-up">Est. 2026 — A Coruña, Spain</p>
   <h1 class="hero-title fade-up">
-    We help
+    <span class="hero-line1">We help</span>
     <span class="outline">Spanish</span><span class="outline">Fashion</span>
     <span class="solid">go international.</span>
   </h1>
@@ -394,8 +394,8 @@ function toggleLang() {
   document.querySelector(".hero-eyebrow").textContent = t.eyebrow;
 
   var heroTitle = document.querySelector(".hero-title");
-  heroTitle.childNodes[0].textContent = t.line1 + " ";
-  heroTitle.childNodes[0].style.letterSpacing = currentLang === "es" ? "0.07em" : "-.04em";
+  var line1 = heroTitle.querySelector(".hero-line1");
+  if (line1) { line1.textContent = t.line1; line1.style.letterSpacing = currentLang === "es" ? "0em" : ""; }
   var outlines = document.querySelectorAll(".hero-title .outline");
   if (outlines[0]) outlines[0].textContent = t.line2;
   if (outlines[1]) {
@@ -403,7 +403,7 @@ function toggleLang() {
     outlines[1].style.transform = currentLang === 'es' ? 'scaleX(1.6)' : 'scaleX(2.0)';
   }
   var solid = document.querySelector(".hero-title .solid");
-  if (solid) solid.textContent = t.line4;
+  if (solid) { solid.textContent = t.line4; solid.style.letterSpacing = currentLang === "es" ? "0em" : ""; }
 
   document.querySelector(".hero-desc").textContent = t.heroDesc;
   document.querySelector(".cta-btn").textContent = t.ctaBtn;
