@@ -37,7 +37,7 @@
     line-height: 0.92;
     letter-spacing: -0.005em;
     margin: 0;
-    overflow-wrap: break-word;
+    text-wrap: balance;
   }
 
   .boton { display: inline-block; padding: 0.75rem 1.3rem; border-radius: 999px; background: var(--pino); color: var(--blanco); font-weight: 600; text-decoration: none; white-space: nowrap; }
@@ -53,7 +53,7 @@
 
   /* Portada */
   .portada { display: grid; gap: 2rem; padding: 3rem 0 2.5rem; }
-  .portada h1 { font-size: clamp(2.4rem, 9.5vw, 7.25rem); max-width: 11ch; }
+  .portada h1 { font-size: clamp(2.6rem, 11vw, 7.25rem); max-width: 12ch; }
   .portada-lateral p { margin: 0 0 1.5rem; color: var(--gris); font-size: 1.125rem; max-width: 26rem; }
 
   /* Panel del ejemplo */
@@ -123,7 +123,7 @@
 
   /* Contacto */
   .contacto h2 { font-size: clamp(2.4rem, 8vw, 5.5rem); max-width: 13ch; }
-  .correo-grande { display: inline-block; margin: 2rem 0 0.75rem; font-weight: 700; font-size: clamp(1.4rem, 4.5vw, 2.3rem); text-decoration-thickness: 2px; text-underline-offset: 6px; word-break: break-word; }
+  .correo-grande { display: inline-block; overflow-wrap: anywhere; margin: 2rem 0 0.75rem; font-weight: 700; font-size: clamp(1.4rem, 4.5vw, 2.3rem); text-decoration-thickness: 2px; text-underline-offset: 6px; word-break: break-word; }
   .telefono { margin: 0; font-size: 1.125rem; color: var(--gris); }
   .telefono a { color: var(--tinta); }
 
@@ -135,7 +135,7 @@
   }
   @media (min-width: 900px) {
     .nav-enlaces { display: flex; }
-    .portada { grid-template-columns: 1fr 20rem; align-items: end; padding: 4.5rem 0 3rem; }
+    .portada { grid-template-columns: 1fr 23rem; align-items: end; padding: 4.5rem 0 3rem; }
     .panel { padding: 3.5rem; }
     .panel-contenido { grid-template-columns: 1.25fr 1fr; }
     .que-hago { grid-template-columns: 14rem 1fr; }
@@ -163,9 +163,9 @@
   </header>
 
   <section class="portada">
-    <h1 class="display">Recordatorios, avisos y papeleo que se hacen solos</h1>
+    <h1 class="display">Que lo repetitivo se haga solo</h1>
     <div class="portada-lateral">
-      <p>Automatizaciones para talleres, clínicas y asesorías de A Coruña. Sobre el correo, las hojas de cálculo y el WhatsApp que ya usas.</p>
+      <p>Recordatorios de citas, avisos a clientes y papeleo automatizados para talleres, clínicas y asesorías de A Coruña. Sobre el correo y el WhatsApp que ya usas.</p>
       <a class="boton" href="#contacto">Cuéntame qué te quita tiempo</a>
     </div>
   </section>
@@ -216,7 +216,7 @@
         <h2 class="display">Tu negocio ya tiene los datos. Falta que trabajen solos.</h2>
         <p class="intro">Las citas están en una agenda, los clientes en una hoja y las facturas en el correo. Conecto esas piezas para que los recordatorios, los avisos y el papeleo salgan sin que nadie tenga que acordarse.</p>
         <div class="persona">
-          <div class="avatar" aria-hidden="true"><img src="lucas.jpg" alt="Lucas"></div>
+          <div class="avatar"><img src="lucas.jpg" alt="Lucas Vilanova"></div>
           <p><strong>Soy Lucas Vilanova</strong>Estudiante de Ciencia e Ingeniería de Datos en la Universidade da Coruña. Monto estas automatizaciones yo mismo y trabajo en persona: si hace falta ver cómo funciona tu negocio, me acerco.</p>
         </div>
       </div>
@@ -284,8 +284,7 @@
     <div class="envoltura">
       <h2 class="display">¿Qué parte de tu día te quita más tiempo?</h2>
       <a class="correo-grande" href="mailto:lucas@klausstudio.com?subject=Quiero%20ver%20qu%C3%A9%20se%20puede%20automatizar">lucas@klausstudio.com</a>
-      <!-- CAMBIAR: tu número, en el texto y en el enlace (formato +34XXXXXXXXX) -->
-      <p class="telefono">O llámame al <a href="tel:+34662521616">+34 662521616</a>.</p>
+      <p class="telefono">O llámame al <a href="tel:+34662521616">662 52 16 16</a>.</p>
     </div>
   </section>
 </main>
